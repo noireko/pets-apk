@@ -14,3 +14,21 @@ h1 {
     font-size: 26px
 }
 
+.seccion-animalitos div {
+background-color:aqua;
+padding-left:30px;
+display:flex;
+}
+
+input {
+    transform: scale(3);
+    margin: 40px 0 40px 50px
+}
+
+img {
+    margin-top:20px;
+    
+    margin-right:20px;
+    height: 50px;
+    width: auto;
+}
