@@ -1,0 +1,1 @@
+Keep track of your pets’ meals with this handy reminder app! Simply check off each meal to record how many times your dog or cats have eaten throughout the day. All data is saved locally, so you’ll never lose your records. The app features a cute dog and two cats to make tracking fun and easy!
