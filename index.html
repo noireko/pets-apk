@@ -5,51 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🐶 Pets 😺</title>
     <link href="css/styles.css" rel="stylesheet">
-    <script type="module">
-  // Importar librerías Firebase
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-analytics.js";
-
-  // Configuración (poné tu firebaseConfig acá)
-  const firebaseConfig = {
-    apiKey: "AIzaSyANv0XWH-kAOUXoM2YVd9vZJQt0_gofCRw",
-    authDomain: "comida-mascotas.firebaseapp.com",
-    projectId: "comida-mascotas",
-    storageBucket: "comida-mascotas.firebasestorage.app",
-    messagingSenderId: "944331542460",
-    appId: "1:944331542460:web:23937b5e25c566b0f5e5b9",
-    measurementId: "G-VWXSP9DZL0"
-  };
-
-  // Inicializar Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-
-  // -----------------------
-  // Lógica para checkboxes
-  // -----------------------
-  const checkboxes = document.querySelectorAll("input[type='checkbox']");
-  const botonGuardar = document.querySelector(".seccion-boton button");
-
-  // Escuchar cambios en tiempo real desde Firebase
-  const dbRef = ref(db, "mascotas");
-  onValue(dbRef, (snapshot) => {
-    const data = snapshot.val() || {};
-    checkboxes.forEach((cb, index) => {
-      cb.checked = data[index] || false;
-    });
-  });
-
-  // Guardar en Firebase al hacer clic en Guardar
-  botonGuardar.addEventListener("click", (e) => {
-    e.preventDefault();
-    let estados = {};
-    checkboxes.forEach((cb, index) => {
-      estados[index] = cb.checked;
-    });
-    set(dbRef, estados);
-  });
-</script>
 </head>
 <body>
     <main>
